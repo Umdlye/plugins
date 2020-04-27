@@ -1,4 +1,4 @@
-/// <reference path="C:/Users/Steph/Desktop/plugin/openrct2.d.ts" />
+/// <reference path="C:/Users/Steph/Documents/OpenRCT2/bin/openrct2.d.ts" />
 
 var list = {};       // Empty object that will hold the counted map objects
 var arr = [];        // Empty array
@@ -29,8 +29,8 @@ function build() {
     createwindowlist();  // Generate the window contents (widgets) based on the above array (see below)
 };
 
-var entryY = 15;
 var entryX = 0;      // The initial X position of a widget
+var entryY = 15;     // The initial Y position of a widget
 var winwidth = 200;  // The initial window width
 var winheight = 15;  // The initial window height
 
@@ -40,8 +40,8 @@ function createwindowlist() {
 
         var entry = {                                                       // Create a widget object and save it to 'entry' variable:
             type: 'label',                                                      // - a label widget is just a bit of text
-            x: entryX,                                                          // - the X position will initially be 15
-            y: entryY,                                                          // - the Y position will initially be 0
+            x: entryX,                                                          // - the X position will initially be 0
+            y: entryY,                                                          // - the Y position will initially be 15
             width: 200,                                                         // - the width of the widget is 200 to match the window width
             height: 10,                                                         // - using a small font so 10 pixels is high enough
             text: '{SMALLFONT}' + obj.name + ': ' + arr[i][1]                   // - list the object name and the object count
